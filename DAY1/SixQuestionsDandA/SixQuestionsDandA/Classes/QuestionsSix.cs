@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SixQuestionsDandA.Classes
 {
-    class QuestionsSix
+    public class QuestionsSix
     {
+        
     }
 }

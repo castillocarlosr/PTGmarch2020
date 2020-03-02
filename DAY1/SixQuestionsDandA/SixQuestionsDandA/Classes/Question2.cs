@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SixQuestionsDandA.Classes
 {
-    public class QuestionTwo
+    public class Question2
     {
         public int NewLength(int[] nums, int val)
         {
@@ -18,7 +18,8 @@ namespace SixQuestionsDandA.Classes
         public int InitialLength(int[] nums, int val)
         {
             int initalLen = nums.Length;
-            nums = nums.Where((item, value) => value != val).ToArray();
+            nums = nums.Where((value) => value != val).ToArray();
+            
             int result = nums.Length;
             return initalLen;
         }

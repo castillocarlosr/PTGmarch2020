@@ -6,7 +6,9 @@ namespace SixQuestionsDandA
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello PTG world!");
+
+            Console.ReadLine();
         }
     }
 }

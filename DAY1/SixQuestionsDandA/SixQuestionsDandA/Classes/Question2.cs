@@ -21,6 +21,7 @@ namespace SixQuestionsDandA.Classes
             return result;
         }
 
+        /*
         public int NewLength(int[] nums, int val)
         {
             for (int i = 0; i < nums.Length-1; i++)
@@ -31,5 +32,6 @@ namespace SixQuestionsDandA.Classes
                 }
             }
         }
+        */
     }
 }

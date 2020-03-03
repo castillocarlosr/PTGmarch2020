@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question7", "Question7\Question7.csproj", "{677DC43B-114D-4BE6-88FE-720B27D21D19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question7", "Question7\Question7.csproj", "{677DC43B-114D-4BE6-88FE-720B27D21D19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitQ7", "XUnitQ7\XUnitQ7.csproj", "{1EED5EE5-A382-4213-B7F2-4E8E7F1CAFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitQ7", "XUnitQ7\XUnitQ7.csproj", "{1EED5EE5-A382-4213-B7F2-4E8E7F1CAFDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

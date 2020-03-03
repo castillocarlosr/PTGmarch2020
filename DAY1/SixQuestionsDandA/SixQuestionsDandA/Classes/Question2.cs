@@ -21,17 +21,21 @@ namespace SixQuestionsDandA.Classes
             return result;
         }
 
-        /*
+        
         public int NewLength(int[] nums, int val)
         {
             for (int i = 0; i < nums.Length-1; i++)
             {
                 if(nums[i] == val)
                 {
-                    nums[i] = nums[i + 1];
+                    for (int j = i; j < nums.Length-2; j++)
+                    {
+                        nums[j + 1] = nums[j];
+                    }
                 }
             }
+            return nums.Length;
         }
-        */
+        
     }
 }

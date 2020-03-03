@@ -20,7 +20,7 @@ namespace SixQuestionsDandA.Classes
                 {
                     if(charFlag == true)
                     {
-                        return 0;
+                        return len;
                     }
                 }
             }

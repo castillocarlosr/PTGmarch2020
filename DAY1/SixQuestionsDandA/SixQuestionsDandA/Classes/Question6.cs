@@ -23,7 +23,7 @@ namespace SixQuestionsDandA.Classes
                 var curled = (open: '{', close: '}');
                 var parenthesis = (open: '(', close: ')');
 
-                for (int i = 0; i < inputChar.Length-1; i++)
+                for (int i = 0; i < inputChar.Length; i++)
                 {
                     if (!eventCharacters.Contains(inputChar[i]))
                         continue;

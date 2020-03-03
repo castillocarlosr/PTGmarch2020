@@ -19,7 +19,7 @@ namespace SixQuestionsDandA
             Question2 questionTwo = new Question2();
             int[] testTwo = new int[] { 3, 2, 2, 3 };
             Console.WriteLine($"Initial Lenght: {questionTwo.InitialLength(testTwo, 3)}");
-            Console.WriteLine($"Final Lenght: {questionTwo.NewLength(testTwo, 3)}");
+            //Console.WriteLine($"Final Lenght: {questionTwo.NewLength(testTwo, 3)}");
 
             Question3 question3 = new Question3();
             int[] test3Arr1 = new int[] { 1, 2, 3, 0, 0, 0 };
@@ -27,6 +27,17 @@ namespace SixQuestionsDandA
             int[] question3Result = question3.MergeSort(test3Arr1, test3Arr2);
             Console.WriteLine("Question 3");
             Console.WriteLine("[{0}]", string.Join(", ", question3Result));
+
+            Question4 question4 = new Question4();
+
+            Question5 question5 = new Question5();
+
+
+            Question6 question6 = new Question6();
+            string test6True = "(){}[]{{}}[[]]({()})";
+            string test6False = "((()(){{{{}}{{[[]";
+            Console.WriteLine($"True should be: {question6.CharterValidation(test6True)}");
+            Console.WriteLine($"False should be: {question6.CharterValidation(test6False)}");
 
             Console.ReadLine();
         }

@@ -32,8 +32,8 @@ namespace SixQuestionsDandA.Classes
                 int temp = k - arr[i];
                 if (hSet.Contains(temp))
                 {
-                    result[0] = arr[i];
-                    result[1] = temp;
+                    result[1] = arr[i];
+                    result[0] = temp;
                     //return result;
                     break;
                 }

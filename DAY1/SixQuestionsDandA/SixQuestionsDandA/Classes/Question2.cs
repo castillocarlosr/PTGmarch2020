@@ -7,21 +7,31 @@ namespace SixQuestionsDandA.Classes
 {
     public class Question2
     {
-        public int NewLength(int[] nums, int val)
+        public int InitialLength(int[] nums, int val)
+        {
+            int initalLen = nums.Length;
+            return initalLen;
+        }
+
+        public int LINQLength(int[] nums, int val)
         {
             int initalLength = nums.Length;
-            nums = nums.Where((item, value) => value != val).ToArray();
+            nums = nums.Where((source, value) => value != val).ToArray();
             int result = nums.Length;
             return result;
         }
 
-        public int InitialLength(int[] nums, int val)
+        /*
+        public int NewLength(int[] nums, int val)
         {
-            int initalLen = nums.Length;
-            nums = nums.Where((value) => value != val).ToArray();
-            
-            int result = nums.Length;
-            return initalLen;
+            for (int i = 0; i < nums.Length-1; i++)
+            {
+                if(nums[i] == val)
+                {
+                    nums[i] = nums[i + 1];
+                }
+            }
         }
+        */
     }
 }

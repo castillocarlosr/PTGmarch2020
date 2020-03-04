@@ -43,19 +43,6 @@ namespace Q3DandA.Classes
                 }
 
             }
-            /*
-            foreach (char character2 in strB)
-            {
-                if (secondString.ContainsKey(character2))
-                {
-                    secondString[character2] += 1;
-                }
-                else
-                {
-                    secondString[character2] = 1;
-                }
-            }
-            */
             //base case 
             if (firstString.Count != secondString.Count)
             {

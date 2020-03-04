@@ -39,6 +39,7 @@ namespace SixQuestionsDandA
 
             Question6 question6 = new Question6();
             Console.WriteLine("");
+            Console.WriteLine("QUESTION 6");
             string simple = "(([[{{";
             string test6True = "(){}[]";
             string test6True2 = "}}))(({{[]";

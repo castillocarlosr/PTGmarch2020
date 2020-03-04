@@ -15,7 +15,7 @@ namespace SixQuestionsDandA.Classes
             }
             else
             {
-                //int zeroCount = 0;
+                int zeroCount = 0;
                 Dictionary<string, int> hashMapBracket = new Dictionary<string, int>{ { "{", 0 },{ "[", 0 },{ "(", 0 } };
                 for (int i = 0; i < str.Length; i++)
                 {
@@ -33,50 +33,27 @@ namespace SixQuestionsDandA.Classes
                     {
                         hashMapBracket["{"] -= 1;
                         /*
-                        if (hashMapBracket.GetValueOrDefault("{") != 0)
+                        if (hashMapBracket["{"] == 0)
                         {
-                            zeroCount++;
+                            zeroCount--;
                         }
                         */
                     }
                     if (str[i] == '[')
                     {
                         hashMapBracket["["] += 1;
-                        /*
-                        if (hashMapBracket.GetValueOrDefault("[") != 0)
-                        {
-                            zeroCount++;
-                        }
-                        */
                     }
                     if (str[i] == ']')
                     {
                         hashMapBracket["["] -= 1;
-                        /*
-                        if (hashMapBracket.GetValueOrDefault("[") != 0)
-                        {
-                            zeroCount++;
-                        }
-                        */
                     }
                     if (str[i] == '(')
                     {
                         hashMapBracket["("] += 1;
-                        /*
-                        if (hashMapBracket.GetValueOrDefault("(") != 0)
-                        {
-                            zeroCount++;
-                        }
-                        */
                     }
                     if (str[i] == ')')
                     {
                         hashMapBracket["("] -= 1;
-                        /*
-                        if (hashMapBracket.GetValueOrDefault("(") != 0)
-                        {
-                            zeroCount++;
-                        }*/
                     }
                 }
                 int para = hashMapBracket["("];

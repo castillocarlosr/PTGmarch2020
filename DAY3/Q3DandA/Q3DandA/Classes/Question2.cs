@@ -6,24 +6,45 @@ namespace Q3DandA.Classes
 {
     public class Question2
     {
-        public static bool AreStringsAnagrams(string a, string b)
+        public bool AreStringsAnagrams(string strA, string strB)
         {
             Dictionary<char, int> firstString = new Dictionary<char, int>();
             Dictionary<char, int> secondString = new Dictionary<char, int>();
+            strA = strA.ToLower().Trim();
+            strB = strB.ToLower().Trim();
 
-            foreach (char character in a)
+            for (int i = 0; i < strA.Length; i++)
             {
-                if (firstString.ContainsKey(character))
+                if (Char.IsLetter(strA[i]))
                 {
-                    firstString[character] += 1;
-                }
-                else
-                {
-                    firstString[character] = 1;
+                    if (firstString.ContainsKey(strA[i]))
+                    {
+                        firstString[strA[i]] += 1;
+                    }
+                    else
+                    {
+                        firstString[strA[i]] = 1;
+                    }
                 }
             }
 
-            foreach (char character2 in b)
+            for (int i = 0; i < strB.Length; i++)
+            {
+                if (Char.IsLetter(strB[i]))
+                {
+                    if (secondString.ContainsKey(strB[i]))
+                    {
+                        secondString[strB[i]] += 1;
+                    }
+                    else
+                    {
+                        secondString[strB[i]] = 1;
+                    }
+                }
+
+            }
+            /*
+            foreach (char character2 in strB)
             {
                 if (secondString.ContainsKey(character2))
                 {
@@ -34,7 +55,7 @@ namespace Q3DandA.Classes
                     secondString[character2] = 1;
                 }
             }
-
+            */
             //base case 
             if (firstString.Count != secondString.Count)
             {

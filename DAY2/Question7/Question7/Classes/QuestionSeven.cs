@@ -6,6 +6,15 @@ namespace Question7.Classes
 {
     public class QuestionSeven
     {
+        public string HashMapNumToWords(int number)
+        {
+            Dictionary<int, string> zeroNineteen = new Dictionary<int, string> { {0, "zero" } };
+            Dictionary<int, string> twentyNinety = new Dictionary<int, string> { };
+            Dictionary<int, string> aboveHunhdred = new Dictionary<int, string> { };
+        }
+        
+        
+        /****************************************************************/
         public string NumbersToWords(int number)
         {
             if(number == 0)

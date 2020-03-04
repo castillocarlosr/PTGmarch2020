@@ -39,13 +39,13 @@ namespace SixQuestionsDandA
 
             Question6 question6 = new Question6();
             Console.WriteLine("");
-            string simple = "(({))";
-            string test6True = "(){}[]{{}}[[]]({()})";
+            string simple = "(([[{{";
+            string test6True = "(){}[]";
             string test6True2 = "}}))(({{[]";
-            string test6False = "((()(){{{{}}{{[[]{{";
-            //Console.WriteLine($"Q6 True should be: {question6.HashMapCharacterValidation(simple)}");
-            //Console.WriteLine($"Q6 True should be: {question6.HashMapCharacterValidation(test6True)}");
-            //Console.WriteLine($"True should be for starting with close: {question6.HashMapCharacterValidation(test6True2)}");
+            string test6False = "{{{{((()(){{{{}}{{[[]{{{{{";
+            Console.WriteLine($"Q6 false should be: {question6.HashMapCharacterValidation(simple)}");
+            Console.WriteLine($"Q6 True should be: {question6.HashMapCharacterValidation(test6True)}");
+            Console.WriteLine($"True should be for starting with close: {question6.HashMapCharacterValidation(test6True2)}");
             Console.WriteLine($"False should be: {question6.HashMapCharacterValidation(test6False)}");
 
             Console.ReadLine();

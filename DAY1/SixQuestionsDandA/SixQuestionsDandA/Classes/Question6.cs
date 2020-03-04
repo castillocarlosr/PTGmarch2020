@@ -15,14 +15,13 @@ namespace SixQuestionsDandA.Classes
             }
             else
             {
-                Dictionary<string, int> hashMapBracket = new Dictionary<string, int>{ { "{", 0 },{ "[", 0 },{ "(", 0 }};
-                int zeroCount = 0;
-                for (int i = 0; i < str.Length-1; i++)
+                //int zeroCount = 0;
+                Dictionary<string, int> hashMapBracket = new Dictionary<string, int>{ { "{", 0 },{ "[", 0 },{ "(", 0 } };
+                for (int i = 0; i < str.Length; i++)
                 {
                     if(str[i] == '{')
                     {
-                        int curlyValue = hashMapBracket.GetValueOrDefault("{");
-                        hashMapBracket["{"] = curlyValue++;
+                        hashMapBracket["{"] += 1;
                         /*
                         if(hashMapBracket.GetValueOrDefault("{") != 0)
                         {
@@ -32,8 +31,7 @@ namespace SixQuestionsDandA.Classes
                     }
                     if (str[i] == '}')
                     {
-                        int curlyValue = hashMapBracket.GetValueOrDefault("{");
-                        hashMapBracket["{"] = curlyValue--;
+                        hashMapBracket["{"] -= 1;
                         /*
                         if (hashMapBracket.GetValueOrDefault("{") != 0)
                         {
@@ -43,8 +41,7 @@ namespace SixQuestionsDandA.Classes
                     }
                     if (str[i] == '[')
                     {
-                        int bracketValue = hashMapBracket.GetValueOrDefault("[");
-                        hashMapBracket["["] = bracketValue++;
+                        hashMapBracket["["] += 1;
                         /*
                         if (hashMapBracket.GetValueOrDefault("[") != 0)
                         {
@@ -54,8 +51,7 @@ namespace SixQuestionsDandA.Classes
                     }
                     if (str[i] == ']')
                     {
-                        int bracketValue = hashMapBracket.GetValueOrDefault("[");
-                        hashMapBracket["["] = bracketValue--;
+                        hashMapBracket["["] -= 1;
                         /*
                         if (hashMapBracket.GetValueOrDefault("[") != 0)
                         {
@@ -65,8 +61,7 @@ namespace SixQuestionsDandA.Classes
                     }
                     if (str[i] == '(')
                     {
-                        int paranthesisValue = hashMapBracket.GetValueOrDefault("(");
-                        hashMapBracket["("] = paranthesisValue++;
+                        hashMapBracket["("] += 1;
                         /*
                         if (hashMapBracket.GetValueOrDefault("(") != 0)
                         {
@@ -76,8 +71,7 @@ namespace SixQuestionsDandA.Classes
                     }
                     if (str[i] == ')')
                     {
-                        int paranthesisValue = hashMapBracket.GetValueOrDefault("(");
-                        hashMapBracket["("] = paranthesisValue--;
+                        hashMapBracket["("] -= 1;
                         /*
                         if (hashMapBracket.GetValueOrDefault("(") != 0)
                         {
@@ -85,11 +79,18 @@ namespace SixQuestionsDandA.Classes
                         }*/
                     }
                 }
-                if (hashMapBracket.GetValueOrDefault("(") != 0 || hashMapBracket.GetValueOrDefault("[") != 0 || hashMapBracket.GetValueOrDefault("{") != 0)
+                int para = hashMapBracket["("];
+                int brack = hashMapBracket["["];
+                int curl = hashMapBracket["{"];
+                if (para != 0 || brack != 0 || curl != 0)
                 {
-                    zeroCount++;
+                    return false;
                 }
-                return zeroCount == 0 ? true : false;
+                else
+                {
+                    return true;
+                }
+                //return zeroCount == 0 ? true : false;
             }
         }
         /***********************************************************************************************/

@@ -22,21 +22,16 @@ namespace Q3DandA.Classes
 
         public void SinglePascal(int k)
         {
+            int[] resultArr = new int[k];
+            int line = 1;
             for (int i = 1; i <= k; i++)
             {
-                int line = 1;
-                if(i == k - 1)
-                {
-                    for (int j = 1; j <= i; j++)
-                    {
-                        Console.Write(line + " ");
-                        line = line * (i - j) / j;
-                    }
-                } 
-                Console.WriteLine("");
+                Console.Write(line + " ");
+                line = line * (k - i) / i;
             }
         }
-        /*
+        /*  old way
+         *  
         public int[,] TriangleArray(int k)
         {
             int[,] arr = new int[k, k];

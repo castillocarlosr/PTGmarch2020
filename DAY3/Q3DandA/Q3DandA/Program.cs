@@ -58,6 +58,8 @@ namespace Q3DandA
 
             Question5 question5 = new Question5();
             question5.PrintPascal(5);
+            Console.WriteLine($"Print only the last line..example input 5:");
+            question5.SinglePascal(5);
 
             Console.ReadLine();
         }

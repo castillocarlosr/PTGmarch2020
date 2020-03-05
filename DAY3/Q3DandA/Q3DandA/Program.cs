@@ -16,17 +16,24 @@ namespace Q3DandA
             int[] testQ1arr2 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8};
             int testQ1Len2 = 3;
             Question1Proper question1 = new Question1Proper();
-            int[][] q1ResultTest1 = question1.subArrs(testQ1arr2, testQ1Len2);
+            int[][] q1ResultTest1 = question1.subArrs(testQ1arr1, testQ1Len1);
             for (int i = 0; i < q1ResultTest1.Length; i++)
             {
                 for (int j = 0; j < q1ResultTest1[i].Length; j++)
                 {
-                    Console.Write(q1ResultTest1[i][j] + " ");
-                    //Console.ReadLine();
+                    Console.Write(q1ResultTest1[i][j]);
                 }
+                Console.WriteLine();
             }
-            //Console.WriteLine($"{Question1.divideSubs(testQ1arr1, testQ1Len1)}");
-            //var intp =  Question1.divideSubs(testQ1arr1, testQ1Len1);
+            int[][] q1ResultTest2 = question1.subArrs(testQ1arr2, testQ1Len2);
+            for (int i = 0; i < q1ResultTest2.Length; i++)
+            {
+                for (int j = 0; j < q1ResultTest2[i].Length; j++)
+                {
+                    Console.Write(q1ResultTest2[i][j]);
+                }
+                Console.WriteLine();
+            }
 
             Console.WriteLine("");
 
@@ -48,6 +55,9 @@ namespace Q3DandA
             question3.BuildPyramid(3);
             question3.BuildPyramid(4);
             question3.BuildPyramid(7);
+
+            Question5 question5 = new Question5();
+            question5.PrintPascal(5);
 
             Console.ReadLine();
         }

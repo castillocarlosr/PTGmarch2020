@@ -25,7 +25,7 @@ namespace Q3DandA.Classes
                 result[i] = new int[len];
             }
             int remainder = arrLength % len;
-            result[numOfSubs - 1] = new int[remainder];//what goes here
+            result[numOfSubs - 1] = new int[remainder];
             int count = 0;
             for (int i = 0; i < result.Length; i++)
             {

@@ -29,10 +29,14 @@ ORDER BY dateHeld;
 and customer name of events placed in January 2018 by customers from Boulder. */
 SELECT eventNum, dateHeld, custNumb, custName
 FROM EventRequest
-WHERE 
+WHERE dateHeld BETWEEN '2018-01-01' AND '2018-01-31'
+AND city = 'Boulder';
 
 /* 6.	List the average number of resources used (NumberFld) by plan number.
  Include only location number L100. */
+ SELECT AVG(NumberFld)
+ FROM ResourcesDB
+ WHERE locationFld = 'L100';
 
 /* 7.	List the average number of resources used (NumberFld) by plan number.
  Only include location number L100. Eliminate plans with less than two event lines

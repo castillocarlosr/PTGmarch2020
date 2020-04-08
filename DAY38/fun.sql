@@ -10,10 +10,9 @@ GO
 -- Create the table in the specified schema
 CREATE TABLE duringCovid.card_rank
 (
-    TableNameId INT NOT NULL PRIMARY KEY, -- primary key column
-    Column1 [NVARCHAR](50) NOT NULL,
-    Column2 [NVARCHAR](50) NOT NULL
-    -- specify more columns here
+    Id INT NOT NULL PRIMARY KEY, -- primary key column
+    rankCard string NOT NULL,
+    valueCard TINYINT
 );
 CREATE TABLE duringCovid.card_suit
 (

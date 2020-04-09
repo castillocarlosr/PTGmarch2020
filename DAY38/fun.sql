@@ -27,18 +27,22 @@ CREATE TABLE duringCovid.card_suit
 );
 CREATE TABLE duringCovid.games
 (
-    id INT NOT NULL PRIMARY KEY, -- primary key column
-    game_Name NVARCHAR(50),
+    --gameId INT NOT NULL PRIMARY KEY, -- primary key column
+    game_Name NVARCHAR(50) NOT NULL PRIMARY KEY,  --primary key is a string to prevent duplicate games added
     inventor NVARCHAR(50),
     year NVARCHAR(50),
     min_Age TINYINT,
     min_Players TINYINT,
     max_Players TINYINT,
-    recommended_Price TINYINT
+    manufacture_Price TINYINT
 );
 CREATE TABLE duringCovid.inventory
 (
     id INT NOT NULL PRIMARY KEY, -- primary key column
-    Column1 [NVARCHAR](50) NOT NULL,
+    shop NVARCHAR(50),
+    game_Name NVARCHAR(50) FOREIGN KEY REFERENCES games.game_Name,  --FOREIGN key to games table
+    qty INT,
+    aisle TINYINT,
+    store_Price DECIMAL(5,2) --In $US currency
 );    
 GO

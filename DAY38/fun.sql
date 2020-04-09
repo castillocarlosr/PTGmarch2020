@@ -15,29 +15,30 @@ GO
 
 CREATE TABLE duringCovid.card_rank
 (
-    Id INT NOT NULL PRIMARY KEY, -- primary key 
-    rankCard string NOT NULL,
+    id INT NOT NULL PRIMARY KEY, -- primary key 
+    rankCard NVARCHAR(50) NOT NULL,
     valueCard TINYINT
 );
 CREATE TABLE duringCovid.card_suit
 (
-    TableNameId INT NOT NULL PRIMARY KEY, -- primary key column
-    Column1 [NVARCHAR](50) NOT NULL,
-    Column2 [NVARCHAR](50) NOT NULL
-    -- specify more columns here
+    id INT NOT NULL PRIMARY KEY, -- primary key 
+    suit NVARCHAR(50) NOT NULL,
+    color NVARCHAR(50) NOT NULL
 );
 CREATE TABLE duringCovid.games
 (
-    TableNameId INT NOT NULL PRIMARY KEY, -- primary key column
-    Column1 [NVARCHAR](50) NOT NULL,
-    Column2 [NVARCHAR](50) NOT NULL
-    -- specify more columns here
+    id INT NOT NULL PRIMARY KEY, -- primary key column
+    game_Name NVARCHAR(50),
+    inventor NVARCHAR(50),
+    year NVARCHAR(50),
+    min_Age TINYINT,
+    min_Players TINYINT,
+    max_Players TINYINT,
+    recommended_Price TINYINT
 );
 CREATE TABLE duringCovid.inventory
 (
-    TableNameId INT NOT NULL PRIMARY KEY, -- primary key column
+    id INT NOT NULL PRIMARY KEY, -- primary key column
     Column1 [NVARCHAR](50) NOT NULL,
-    Column2 [NVARCHAR](50) NOT NULL
-    -- specify more columns here
 );    
 GO

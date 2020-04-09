@@ -1,16 +1,21 @@
 -- Create a new table called 'TableName' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.TableName', 'U') IS NOT NULL
+
+--SCHEMA Name: duringCovid
+--IF OBJECT_ID('SchemaName.TableName', 'U') IS NOT NULL
+IF OBJECT_ID('duringCovid.card_rank', 'U') IS NOT NULL
 DROP TABLE duringCovid.card_rank
+IF OBJECT_ID('duringCovid.card_suit', 'U') IS NOT NULL
 DROP TABLE duringCovid.card_suit
+IF OBJECT_ID('duringCovid.games', 'U') IS NOT NULL
 DROP TABLE duringCovid.games
+IF OBJECT_ID('duringCovid.inventory', 'U') IS NOT NULL
 DROP TABLE duringCovid.inventory
 GO
 
--- Create the table in the specified schema
 CREATE TABLE duringCovid.card_rank
 (
-    Id INT NOT NULL PRIMARY KEY, -- primary key column
+    Id INT NOT NULL PRIMARY KEY, -- primary key 
     rankCard string NOT NULL,
     valueCard TINYINT
 );

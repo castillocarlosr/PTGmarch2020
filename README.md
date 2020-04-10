@@ -6,6 +6,12 @@ Day1: D&A
 Day2: D&A
 <br/>
 Day3: D&A
+<br/>
+Day16: SQL DML(Data Manipulation Language)
+<br/>
+Day17: SQL DML(Data Manipulation Language)
+<br/>
+Day38: SQL DDL(Data Definition Language)
 
 ## Covid-19
 ```
@@ -23,3 +29,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * People Tech Group
 - They helped me get started until the Covid-19 virus came and put all our training on pause.
+
+```
+Last update:  April 10, 2020
+```

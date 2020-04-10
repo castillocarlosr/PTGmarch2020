@@ -17,9 +17,6 @@ Day38: SQL DDL(Data Definition Language)
 ```
 Thanks to Covid-19 my work will be more self learning at home.
 ```
-<br/>
-Day16: SQL practice
-
 
 ## License
 
